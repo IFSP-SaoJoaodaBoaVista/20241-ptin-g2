@@ -6,13 +6,26 @@
   <title>TechBridge</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-   
     // CORES DE FUNDO
     tailwind.config = {
       theme: {
         extend: {
           colors: {
+            'branco-falso': '#f0f9ff',
             'primary': '#062A44',
+            'blue-whale': {
+                '50': '#f0f9ff',
+                '100': '#dff1ff',
+                '200': '#b9e5fe',
+                '300': '#7ad1ff',
+                '400': '#34bbfc',
+                '500': '#09a3ee',
+                '600': '#0081cb',
+                '700': '#0067a4',
+                '800': '#045788',
+                '900': '#0a4970',
+                '950': '#062a44',
+            },
             'secondary': '#CBF3EA',
             'tertiary': '#31C4CE',
             'quaternary': '#1381A4',
@@ -20,23 +33,16 @@
             'sexta':'#3d1d12',
             'setima': '#ff4000'
           },
+          fontFamily: {
+            'sans': ['Poppins', 'sans-serif'],
+          }
         }
       }
     }
-
   </script>
-
-
-  <style>
-    html, body {
-      height: 100%;
-    }
-  </style>
-
-
 </head>
-<body class="bg-quinta flex flex-col min-h-screen  overflow-x-hidden ">
-  <header class="py-8 flex flex-row justify-around items-center bg-primary shadow-lg border-2 border-blue-800">
+<body class="bg-branco-falso flex flex-col min-h-screen flex-grow">
+  <header class="py-2 flex flex-row justify-around items-center sticky top-0 bg-primary shadow-lg rounded-b-2xl drop-shadow-xl">
     <img class="w-20 h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central">
     <nav>
       <ul class="flex flex-row gap-8 text-secondary items-center text-1 font-bold tracking-wide">
@@ -47,54 +53,56 @@
     </nav>
   </header>
   
-  
-  <main class="flex-grow overflow-y-auto overflow-x-hidden bg-VAZIO">
+  <main class="flex-grow overflow-y-auto">
     
-    <section class="flex flex-col justify-start items-center bg-quinta text-white " >
-        <div class="text-center flex flex-row  justify-center bg-VAZIO  w-full max-w-screen-2xl pt-36">
-          <br><br><br><br>
-          <p class="font-bold text-8xl bg- w-screen">Bem-vindo, somos a </p>
-          <p class="font-bold text-white bg-sexta text-8xl ">TechBridge!</p>
+    <section class="flex flex-col justify-start items-center text-white" >
+        <div class="text-center flex flex-row justify-center w-full max-w-screen-2xl pt-36">
+          <p class="text-black text-6xl w-screen">Bem-vindo, somos a <span class="font-bold">TechBridge!</span></p>
         </div>
-        <br>
         
-        
-        <div class="flex flex-row justify-center items-center bg-VAZIO space-x-10 w-3/4 pt-36">
-          <div class="flex flex-col justify-center items-center border-2 border-blue-800 rounded-3xl shadow-2xl opacity-75   bg-primary p-4 text-4xl  w-2/4  h-full transition duration-500 ease-in-out bg-blue-600 hover:bg- transform hover:-translate-y-1 hover:scale-110 cursor-pointer" >
+        <div class="flex flex-row justify-center items-center space-x-10 w-3/4 pt-36">
+          <div class="flex flex-col justify-center items-center rounded-3xl shadow-2xl bg-primary p-4 text-4xl w-2/4 h-full transition duration-200 ease-in-out bg-blue-600 hover:scale-110 cursor-pointer" >
           
             <img class="w-full" src="public/img/sjbv.jpg" alt="">
             <br>
-            <p class="font-bold text-white bg-sexta ">Serviços Feitos Para São João da Boa Vista </p>
+            <p class="font-bold text-white">Serviços Feitos Para São João da Boa Vista</p>
             
           </div>
         
-          <div class="flex flex-col justify-center items-center border-2 border-blue-900 rounded-3xl shadow-2xl opacity-75  bg-primary  p-2   max-w-lg w-screen h-2/4 ">
-            <h1 class="text-7xl text-center font-bold">A ponte para o Futuro</h1>
+          <div class="flex flex-col justify-center items-center border-2 border-blue-900 rounded-3xl shadow-2xl bg-primary p-2 max-w-lg w-screen h-2/4 ">
+            <h1 class="text-6xl text-center font-bold">A ponte para o Futuro</h1>
             <br>
-            <h1 class="text-3xl text-center font-semibold bg-sexta">Desde 2022 concretizando sonhos e batendo metas!</h1>
+            <h1 class="text-3xl text-center font-semibold">Desde 2022 concretizando sonhos e batendo metas!</h1>
           </div>          
       </div>
-
-      <br><br><br>
-      <div class="bg-black  w-screen h-0.5 " >
-
-        <p class=" text-7xl text-center font-semibold pt-20">CASES DE SUCESSO</p>
-        <p class=" text-7xl text-center font-semibold pt-20">CASES DE SUCESSO</p>
-        <p class=" text-7xl text-center font-semibold pt-20">CASES DE SUCESSO</p>
-        <p class=" text-7xl text-center font-semibold pt-20">CASES DE SUCESSO</p>
-        <p class=" text-7xl text-center font-semibold pt-20">CASES DE SUCESSO</p>
-        <p class=" text-7xl text-center font-semibold pt-20">CASES DE SUCESSO</p>
-        <p class=" text-7xl text-center font-semibold pt-20">CASES DE SUCESSO</p>
-
-      </div>
     </section>
+    <section class="my-10 px-8">
+      <h3 class="text-2xl font-bold text-center mb-4">Cases de Sucesso</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-primary p-4 rounded-lg shadow-md">
+              <h4 class="font-semibold text-white">Case 1</h4>
+              <p class="text-white">Descrição do case de sucesso 1.</p>
+          </div>
+          <div class="bg-primary p-4 rounded-lg shadow-md">
+              <h4 class="font-semibold text-white">Case 2</h4>
+              <p class="text-white">Descrição do case de sucesso 2.</p>
+          </div>
+          <div class="bg-primary p-4 rounded-lg shadow-md">
+              <h4 class="font-semibold text-white">Case 3</h4>
+              <p class="text-white">Descrição do case de sucesso 3.</p>
+          </div>
+          <div class="bg-primary p-4 rounded-lg shadow-md">
+              <h4 class="font-semibold text-white">Case 4</h4>
+              <p class="text-white">Descrição do case de sucesso 4.</p>
+          </div>
+      </div>
+  </section>
   </main>
 
   <!-- footer-container -->
-  
-  <footer class="bg-primary border-2 border-blue-800 text-white w-full">
-      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 bg-VAZIO">
-        <hr class="my-6 border-gray-500 sm:mx-auto lg:my-8" />
+  <footer class="bg-primary text-white rounded-t-2xl">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <hr class="my-2 border-gray-500 sm:mx-auto lg:my-4" />
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="#" class="hover:underline">TechBridge</a>. All Rights Reserved.
             </span>
@@ -126,8 +134,6 @@
             </div>
         </div>
       </div>
-    </footer>
-
-  
+    </footer>  
 </body>
 </html>
