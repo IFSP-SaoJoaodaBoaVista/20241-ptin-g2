@@ -11,7 +11,7 @@
       theme: {
         extend: {
           colors: {
-            'branco-falso': '#f0f9ff',
+            'fake-white': '#f0f9ff',
             'primary': '#062A44',
             'blue-whale': {
                 '50': '#f0f9ff',
@@ -35,14 +35,17 @@
           },
           fontFamily: {
             'sans': ['Poppins', 'sans-serif'],
+          },
+          backgroundImage: {
+            'dark-sea': "url('./public/img/dark-sea.jpeg')",
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-branco-falso flex flex-col min-h-screen flex-grow">
-  <header class="w-auto font-sans p-2 sm:p-auto flex flex-row justify-around items-center top-0 bg-primary shadow-lg drop-shadow-xl">
+<body class="bg-fake-white flex flex-col min-h-screen flex-grow">
+  <header class="w-screen absolute font-sans p-2 sm:p-auto flex flex-row justify-around items-center bg-primary shadow-lg drop-shadow-xl">
     <img class="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central"> 
     <nav class="md:block hidden">
       <ul class="flex flex-row gap-8 text-secondary items-center text-base tracking-wide">
@@ -65,25 +68,26 @@
         <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><a href="">Sobre Nós</a></li>
       </ul>
     </div>
-    <section class="flex flex-col justify-start items-center text-white" >
-        <div class="text-center flex flex-row justify-center w-full max-w-screen-2xl pt-36">
-          <p class="text-black text-6xl w-screen">Bem-vindo, somos a <span class="font-bold">TechBridge!</span></p>
+    <section class="flex flex-col md:flex-row gap-8 justify-center items-center text-white bg-[url('public/img/dark-sea-2.jpeg')] h-screen bg-no-repeat bg-cover" >
+      <div class="text-center flex flex-row justify-center pt-36">
+        <h2 class="text-left drop-shadow-2xl text-4xl sm:text-5xl">Bem-vindo,<br> somos a <span class="font-bold">TechBridge!</span></h2>
+      </div>
+      <div class="">
+        <img class="w-full" src="./public/img/world-rafiki.svg" alt="">
+      </div>
+    </section>
+    <section>
+      <div class="flex flex-row justify-center items-center space-x-10 w-3/4 pt-36">
+        <div class="flex flex-col justify-center items-center rounded-3xl shadow-2xl bg-primary p-4 text-4xl w-2/4 h-full" >
+          <img class="w-full" src="public/img/sjbv.jpg" alt="">
+          <br>
+          <p class="font-bold text-white">Serviços Feitos Para São João da Boa Vista</p>
         </div>
-        
-        <div class="flex flex-row justify-center items-center space-x-10 w-3/4 pt-36">
-          <div class="flex flex-col justify-center items-center rounded-3xl shadow-2xl bg-primary p-4 text-4xl w-2/4 h-full" >
-          
-            <img class="w-full" src="public/img/sjbv.jpg" alt="">
-            <br>
-            <p class="font-bold text-white">Serviços Feitos Para São João da Boa Vista</p>
-            
-          </div>
-        
-          <div class="flex flex-col justify-center items-center border-2 border-blue-900 rounded-3xl shadow-2xl bg-primary p-2 max-w-lg w-screen h-2/4 ">
-            <h1 class="text-6xl text-center font-bold">A ponte para o Futuro</h1>
-            <br>
-            <h1 class="text-3xl text-center font-semibold">Desde 2022 concretizando sonhos e batendo metas!</h1>
-          </div>          
+        <div class="flex flex-col justify-center items-center border-2 border-blue-900 rounded-3xl shadow-2xl bg-primary p-2 max-w-lg w-screen h-2/4 ">
+          <h1 class="text-6xl text-center font-bold">A ponte para o Futuro</h1>
+          <br>
+          <h1 class="text-3xl text-center font-semibold">Desde 2022 concretizando sonhos e batendo metas!</h1>
+        </div>          
       </div>
     </section>
     <section class="my-10 px-8">
@@ -122,12 +126,6 @@
                           <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
                       </svg>
                     <span class="sr-only">Facebook page</span>
-                </a>
-                <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                          <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                      </svg>
-                    <span class="sr-only">Discord community</span>
                 </a>
                 <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
                     <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
