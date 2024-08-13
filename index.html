@@ -31,13 +31,17 @@
             'quaternary': '#1381A4',
             'quinta': '#12323D',
             'sexta':'#3d1d12',
-            'setima': '#ff4000'
+            'setima': '#ff4000',
+            'oitava': '#0c2638'
           },
           fontFamily: {
             'sans': ['Poppins', 'sans-serif'],
           },
           backgroundImage: {
             'dark-sea': "url('./public/img/dark-sea.jpeg')",
+          },
+          animation: {
+            'pulse-slow': 'pulse 1.5s cubic-bezier(1, 1, 1, 1) infinite',
           }
         }
       }
@@ -45,34 +49,36 @@
   </script>
 </head>
 <body class="bg-fake-white flex flex-col min-h-screen flex-grow">
-  <header class="w-screen absolute font-sans p-2 sm:p-auto flex flex-row justify-around items-center bg-primary shadow-lg drop-shadow-xl">
-    <img class="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central"> 
-    <nav class="md:block hidden">
-      <ul class="flex flex-row gap-8 text-secondary items-center text-base tracking-wide">
-        <li class="cursor-pointer px-3 py-1 rounded-md hover:bg-blue-whale-50 hover:text-primary duration-300"><a href="">Início</a></li>
-        <li class="cursor-pointer px-3 py-1 rounded-md hover:bg-blue-whale-50 hover:text-primary duration-300"><a href="">Cases de Sucesso</a></li>
-        <li class="cursor-pointer border-2 border-blue-whale-50 px-2 py-1 rounded-md hover:bg-blue-whale-50 hover:text-primary duration-300"><a href="">Sobre Nós</a></li>
-      </ul>
-    </nav>
-    <button id="menu-btn" type="button" class="cursor-pointer block md:hidden text-secondary focus:outline-none">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <header class="w-screen fixed font-sans sm:p-auto bg-primary shadow-lg drop-shadow-xl">
+    <div class="flex flex-row justify-around items-center p-2">
+      <img class="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central"> 
+      <nav class="md:block hidden">
+        <ul class="flex flex-row gap-8 text-secondary items-center text-base tracking-wide">
+          <li class="cursor-pointer px-3 py-1 rounded-md hover:bg-blue-whale-50 hover:text-primary duration-300"><a href="">Início</a></li>
+          <li class="cursor-pointer px-3 py-1 rounded-md hover:bg-blue-whale-50 hover:text-primary duration-300"><a href="">Cases de Sucesso</a></li>
+          <li class="cursor-pointer border-2 border-blue-whale-50 px-2 py-1 rounded-md hover:bg-blue-whale-50 hover:text-primary duration-300"><a href="">Sobre Nós</a></li>
+        </ul>
+      </nav>
+      <button id="menu-btn" type="button" class="cursor-pointer block md:hidden text-secondary focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-  </header>
-  <main class="flex-grow overflow-y-auto">
-    <div id="menu" class="bg-primary md:hidden py-10 px-5 text-left duration-75">
+        </svg>
+      </button>
+    </div>
+    <div id="menu" class="bg-oitava hidden md:hidden py-10 px-5 text-left duration-75 drop-shadow-xl">
       <ul class="text-primary block text-base tracking-wide flex flex-col gap-2">
         <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><a href="">Início</a></li>
         <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><a href="">Cases de Sucesso</a></li>
         <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><a href="">Sobre Nós</a></li>
       </ul>
     </div>
-    <section class="flex flex-col md:flex-row gap-8 justify-center items-center text-white bg-[url('public/img/dark-sea-2.jpeg')] h-screen bg-no-repeat bg-cover" >
-      <div class="text-center flex flex-row justify-center pt-36">
-        <h2 class="text-left drop-shadow-2xl text-4xl sm:text-5xl">Bem-vindo,<br> somos a <span class="font-bold">TechBridge!</span></h2>
+  </header>
+  <main class="flex-grow overflow-y-auto">
+    <section class="flex flex-col md:flex-row md:gap-8 justify-center items-center text-white bg-[url('public/img/dark-sea-2.jpeg')] h-screen bg-no-repeat bg-cover" >
+      <div class="text-center flex flex-row justify-center px-10 pt-10 md:pt-36">
+        <h2 class="text-left text-4xl sm:text-5xl">Bem-vindo,<br> somos a <span id="typing-animation" class="font-bold">TechBridge!</span></h2>
       </div>
-      <div class="">
+      <div class="hidden md:block">
         <img class="w-full" src="./public/img/world-rafiki.svg" alt="">
       </div>
     </section>
@@ -145,11 +151,5 @@
     </footer>  
 </body>
 </html>
-<script>
-   const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-
-    menuBtn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
-</script>
+<script src="src/assets/menu.js"></script>
+<script src="src/assets/typing.js"></script>
