@@ -9,9 +9,17 @@
     // CORES DE FUNDO
     tailwind.config = {
       theme: {
+        screens:{
+          '530': '530px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+          '2xl': '1536px'
+        },
         extend: {
           colors: {
-            'fake-white': '#f0f9ff',
+            'off-white': '#F2F0EF',
             'primary': '#062A44',
             'blue-whale': {
                 '50': '#f0f9ff',
@@ -41,14 +49,20 @@
             'dark-sea': "url('./public/img/dark-sea.jpeg')",
           },
           animation: {
-            'pulse-slow': 'pulse 1.5s cubic-bezier(1, 1, 1, 1) infinite',
-          }
+            fade: 'fadeOut 1s ease-in-out',          
+          },
+          keyframes: theme => ({
+            fadeOut: {
+              '0%': { backgroundColor: theme('colors.transparent') },
+              '100%': { backgroundColor: theme('colors.white') },
+            },
+          }),
         }
       }
     }
   </script>
 </head>
-<body class="bg-fake-white flex flex-col min-h-screen flex-grow">
+<body class="bg-off-white flex flex-col min-h-screen flex-grow">
   <header class="w-screen fixed font-sans sm:p-auto bg-primary shadow-lg drop-shadow-xl">
     <div class="flex flex-row justify-around items-center p-2">
       <img class="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central"> 
@@ -74,15 +88,20 @@
     </div>
   </header>
   <main class="flex-grow overflow-y-auto">
-    <section class="flex flex-col md:flex-row md:gap-8 justify-center items-center text-white bg-[url('public/img/dark-sea-2.jpeg')] h-screen bg-no-repeat bg-cover" >
-      <div class="text-center flex flex-row justify-center px-10 pt-10 md:pt-36">
-        <h2 class="text-left text-4xl sm:text-5xl">Bem-vindo,<br> somos a <span id="typing-animation" class="font-bold">TechBridge!</span></h2>
+    <section class="flex flex-col md:flex-row md:gap-8 justify-center items-center text-off-white bg-[url('public/img/dark-sea.jpeg')] h-screen bg-no-repeat bg-cover" >
+      <div class="flex flex-col justify-left gap-6 px-10 w-11/12 md:w-3/6">
+        <h2 id="typing" class="text-left font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl"></h2>
+        <h3 id="sub-typing" class="text-left text-xl sm:text-2xl"></h3>
+        <button id="learn-more" type="button" class="hidden animate-fade justify-around w-3/6 530:w-2/6 md:w-3/6 lg:w-4/12 xl:w-3/12 text-primary bg-white hover:bg-off-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+          Saiba Mais
+          <img viewBox="0 0 10 10" class="w-3" src="./public/img/down-arrow-svgrepo-com.svg" alt="">
+        </button>
       </div>
-      <div class="hidden md:block">
-        <img class="w-full" src="./public/img/world-rafiki.svg" alt="">
+      <div class="hidden md:block w-2/6">
+        <img class="w-full" viewBox="0 0 50 50" src="./public/img/connected-rafiki.svg" alt="">
       </div>
     </section>
-    <section>
+    <section class="h-screen">
       <div class="flex flex-row justify-center items-center space-x-10 w-3/4 pt-36">
         <div class="flex flex-col justify-center items-center rounded-3xl shadow-2xl bg-primary p-4 text-4xl w-2/4 h-full" >
           <img class="w-full" src="public/img/sjbv.jpg" alt="">
