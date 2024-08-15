@@ -1,4 +1,3 @@
-// script de animação de digitação no techbridge vem aqui
 const text = "Bem vindo, somos a TechBridge!";
 const subtext = "Uma empresa de tecnologia que busca soluções inovadoras para o seu negócio.";
 
@@ -6,7 +5,7 @@ let index = 0;
 
 function typeWriter() {
   if (index < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(index);
+    updateTextContent('typing', document.getElementById('typing').innerHTML + text.charAt(index));
     index++;
     setTimeout(typeWriter, 50);
   } else {
@@ -17,7 +16,7 @@ function typeWriter() {
 
 function typeWriterSubText() {
   if (index < subtext.length) {
-    document.getElementById("sub-typing").innerHTML += subtext.charAt(index);
+    updateTextContent('sub-typing', document.getElementById('sub-typing').innerHTML + subtext.charAt(index));
     index++;
     setTimeout(typeWriterSubText, 30);
   } else {
@@ -27,8 +26,16 @@ function typeWriterSubText() {
 }
 
 function showButton() {
+  const scrollPosition = window.scrollY;
   document.getElementById("learn-more").style.display = "flex";
+  window.scrollTo(0, scrollPosition);
 }
 
+function updateTextContent(elementId, newText) {
+    const scrollPosition = window.scrollY;
+    const element = document.getElementById(elementId);
+    element.innerHTML = newText;
+    window.scrollTo(0, scrollPosition);
+}
 
 typeWriter();
