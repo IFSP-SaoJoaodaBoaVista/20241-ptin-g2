@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechBridge</title>
@@ -48,6 +51,8 @@
           },
           fontFamily: {
             'sans': ['Montserrat', 'sans-serif'],
+            'serif': ['Libre Baskerville', 'serif'],
+=======
           },
           backgroundImage: {
             'dark-sea': "url('./public/img/dark-sea.jpeg')",
@@ -67,14 +72,14 @@
   </script>
 </head>
 <body class="bg-off-white flex flex-col min-h-screen flex-grow">
-  <header class="w-screen fixed font-sans sm:p-auto bg-primary shadow-lg drop-shadow-xl">
+  <header class="w-screen fixed font-sans font-medium sm:p-auto bg-primary shadow-lg drop-shadow-xl z-10">
     <div class="flex flex-row justify-around items-center p-2">
       <img class="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central"> 
       <nav class="md:block hidden">
-        <ul class="flex flex-row gap-8 text-secondary items-center text-base tracking-wide">
-          <li class="cursor-pointer px-3 py-1 rounded-md hover:bg-blue-whale-50 hover:text-primary duration-300"><a href="">Início</a></li>
-          <li class="cursor-pointer px-3 py-1 rounded-md hover:bg-blue-whale-50 hover:text-primary duration-300"><a href="">Cases de Sucesso</a></li>
-          <li class="cursor-pointer border-2 border-blue-whale-50 px-2 py-1 rounded-md hover:bg-blue-whale-50 hover:text-primary duration-300"><a href="">Sobre Nós</a></li>
+        <ul class="flex flex-row gap-8 text-off-white items-center tracking-wide drop-shadow-2xl capitalize">
+          <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><a href="">Início</a></li>
+          <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><a href="">Cases de sucesso</a></li>
+          <li class="cursor-pointer border-2 border-blue-whale-50 px-3 py-px rounded-lg bg-off-white text-primary animate-bounce duration-300"><a href="">Sobre nós</a></li>
         </ul>
       </nav>
       <button id="menu-btn" type="button" class="cursor-pointer block md:hidden text-secondary focus:outline-none">
@@ -94,9 +99,9 @@
   <main class="flex-grow overflow-y-auto">
     <section class="flex flex-col md:flex-row md:gap-8 justify-center items-center text-off-white bg-[url('public/img/dark-sea.jpeg')] h-screen bg-no-repeat bg-cover" >
       <div class="flex flex-col justify-left gap-6 px-10 w-11/12 md:w-3/6">
-        <h2 id="typing" class="text-left font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl"></h2>
-        <h3 id="sub-typing" class="text-left text-xl sm:text-2xl"></h3>
-        <button id="learn-more" type="button" class="hidden animate-fade justify-around w-3/6 530:w-2/6 md:w-3/6 lg:w-4/12 xl:w-3/12 text-primary bg-white hover:bg-off-white font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center">
+        <h2 id="typing" class="text-left font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans drop-shadow-2xl z-auto"></h2>
+        <h3 id="sub-typing" class="text-left text-xl sm:text-2xl font-serif drop-shadow-2xl"></h3>
+        <button id="learn-more" type="button" class="hidden animate-fade justify-around text-sm w-3/6 530:w-3/6 530:text-base md:w-3/6 lg:w-4/12 xl:w-3/12 text-primary font-semibold bg-white hover:bg-off-white font-sans rounded-lg px-5 py-2.5 text-center inline-flex items-center">
           Saiba Mais
           <img viewBox="0 0 10 10" class="w-3" src="./public/img/down-arrow-svgrepo-com.svg" alt="">
         </button>
