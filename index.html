@@ -70,15 +70,15 @@
     }
   </script>
 </head>
-<body class="bg-off-white flex flex-col min-h-screen flex-grow">
-  <header class="w-screen fixed font-sans font-medium sm:p-auto bg-primary shadow-lg drop-shadow-xl z-10">
+<body class="text-sans bg-off-white flex flex-col min-h-screen flex-grow">
+  <header id="inicio" class="w-screen fixed font-sans font-medium sm:p-auto bg-primary shadow-lg drop-shadow-xl z-10">
     <div class="flex flex-row justify-around items-center p-2">
       <img class="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central"> 
       <nav class="md:block hidden">
         <ul class="flex flex-row gap-8 text-off-white items-center tracking-wide drop-shadow-2xl capitalize">
-          <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><a href="">Início</a></li>
-          <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><a href="">Cases de sucesso</a></li>
-          <li class="cursor-pointer border-2 border-blue-whale-50 px-3 py-px rounded-lg bg-off-white text-primary animate-bounce duration-300"><a href="">Sobre nós</a></li>
+          <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><button data-target="#inicio">Início</button></li>
+          <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><button data-target="#caso-sucesso">Caso de Sucesso</button></li>
+          <li class="cursor-pointer border-2 border-blue-whale-50 px-3 py-px rounded-lg bg-off-white text-primary animate-bounce duration-300"><button data-target="#sobre-nos">Sobre nós</button></li>
         </ul>
       </nav>
       <button id="menu-btn" type="button" class="cursor-pointer block md:hidden text-secondary focus:outline-none">
@@ -89,9 +89,9 @@
     </div>
     <div id="menu" class="bg-oitava hidden md:hidden py-10 px-5 text-left duration-75 drop-shadow-xl">
       <ul class="text-primary block text-base tracking-wide flex flex-col gap-2">
-        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><a href="">Início</a></li>
-        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><a href="">Cases de Sucesso</a></li>
-        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><a href="">Sobre Nós</a></li>
+        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><button data-target="#inicio">Início</button></li>
+        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><button data-target="#caso-sucesso">Caso de Sucesso</button></li>
+        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><button data-target="#sobre-nos">Sobre Nós</button></li>
       </ul>
     </div>
   </header>
@@ -99,8 +99,8 @@
     <section class="flex flex-col md:flex-row md:gap-8 justify-center items-center text-off-white bg-[url('public/img/dark-sea.jpeg')] h-screen bg-no-repeat bg-cover" >
       <div class="flex flex-col justify-left gap-6 px-10 w-11/12 md:w-3/6">
         <h2 id="typing" class="text-left font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans drop-shadow-2xl z-auto"></h2>
-        <h3 id="sub-typing" class="text-left text-xl sm:text-2xl font-serif drop-shadow-2xl"></h3>
-        <button id="learn-more" type="button" class="hidden animate-fade justify-around text-sm w-3/6 530:w-3/6 530:text-base md:w-3/6 lg:w-4/12 xl:w-3/12 text-primary font-semibold bg-white hover:bg-off-white font-sans rounded-lg px-5 py-2.5 text-center inline-flex items-center">
+        <h3 id="sub-typing" class="text-left text-xl sm:text-2xl drop-shadow-2xl"></h3>
+        <button data-target="#video" id="learn-more" type="button" class="hidden animate-fade justify-around text-sm w-3/6 530:w-3/6 530:text-base md:w-3/6 lg:w-4/12 xl:w-3/12 text-primary font-semibold bg-white hover:bg-off-white font-sans rounded-lg px-5 py-2.5 text-center inline-flex items-center">
           Saiba Mais
           <img viewBox="0 0 10 10" class="w-3" src="./public/img/down-arrow-svgrepo-com.svg" alt="">
         </button>
@@ -109,7 +109,8 @@
         <img class="w-full" viewBox="0 0 50 50" src="./public/img/connected-rafiki.svg" alt="">
       </div>
     </section>
-    <section class="h-screen w-screen flex flex-col justify-evenly border-b border-gray-900">
+
+    <section id="video" class="h-screen w-screen flex flex-col justify-evenly border-b border-gray-900">
       <div class="py-5 flex flex-col gap-20 text-center text-2xl font-semibold gap-2 px-10">
           <h2 class="font-sans">Conheça um pouco sobre nossa empresa!</h2>
       </div>
@@ -117,26 +118,147 @@
         <iframe class="drop-shadow-2xl w-screen sm:w-3/4 lg:w-3/4" src="https://www.youtube.com/embed/J37EhEaUdQU?si=mCy12kr2g7qSj530" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </section>
-    <section class="my-10 px-8">
-      <h3 class="text-2xl font-bold text-center mb-4">Cases de Sucesso</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-primary p-4 rounded-lg shadow-md">
-              <h4 class="font-semibold text-white">Case 1</h4>
-              <p class="text-white">Descrição do case de sucesso 1.</p>
-          </div>
-          <div class="bg-primary p-4 rounded-lg shadow-md">
-              <h4 class="font-semibold text-white">Case 2</h4>
-              <p class="text-white">Descrição do case de sucesso 2.</p>
-          </div>
-          <div class="bg-primary p-4 rounded-lg shadow-md">
-              <h4 class="font-semibold text-white">Case 3</h4>
-              <p class="text-white">Descrição do case de sucesso 3.</p>
-          </div>
-          <div class="bg-primary p-4 rounded-lg shadow-md">
-              <h4 class="font-semibold text-white">Case 4</h4>
-              <p class="text-white">Descrição do case de sucesso 4.</p>
-          </div>
+    <section id="caso-sucesso" class="font-serif text-justify my-10 px-8">      
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h4 class="text-xl font-semibold text-primary mb-4">Caso de Sucesso</h4>
+        <p class="text-lg mb-4">
+          A empresa <span class="font-semibold">TechBridge</span>, especializada em desenvolvimento de soluções tecnológicas, recebeu um desafio da Prefeitura Municipal de São João da Boa Vista em 2024: criar uma plataforma que centralizasse todas as informações sobre eventos culturais e pontos turísticos da cidade, facilitando o acesso da população e dos visitantes.
+        </p>
+        <p class="text-lg mb-4">
+          Os cidadãos expressavam sua frustração com a dificuldade de acesso a informações relevantes, o que impactava diretamente na participação em eventos e na visitação a pontos turísticos.
+        </p>
+        <p class="text-lg mb-4">
+          Para resolver esse problema, a prefeitura buscou uma empresa parceira que pudesse atender às necessidades da população de forma eficaz e inovadora. Este projeto não apenas visava melhorar a comunicação, mas também fortalecer a identidade cultural da cidade e promover o turismo local.
+        </p>
+    
+        <h4 class="text-xl font-semibold text-primary mt-6 mb-4">Mapeamento das Necessidades da População</h4>
+        <p class="text-lg mb-4">
+          A empresa iniciou o projeto com um levantamento de requisitos junto à população de São João da Boa Vista. Por meio de entrevistas, grupos focais e pesquisas online, a equipe da empresa identificou que muitos moradores, especialmente aqueles de regiões mais afastadas do centro, não tinham conhecimento completo sobre os pontos turísticos, horários de funcionamento e locais importantes da cidade.
+        </p>
+    
+        <h4 class="text-xl font-semibold text-primary mt-6 mb-4">Desenvolvimento da Plataforma</h4>
+        <p class="text-lg mb-4">
+          Com os requisitos em mãos, a TechBridge iniciou o processo de prototipação e desenvolvimento da plataforma web. A equipe trabalhou em estreita colaboração com a prefeitura para garantir que todas as informações relevantes fossem incluídas e apresentadas de forma clara e acessível.
+        </p>
+    
+        <h4 class="text-xl font-semibold text-primary mt-6 mb-4">Design e Funcionalidades</h4>
+        <p class="text-lg mb-4">
+          A plataforma foi projetada para ser intuitiva e fácil de navegar, com uma interface amigável e responsiva para dispositivos móveis. As principais funcionalidades incluíam:
+        </p>
+        <ul class="list-disc list-inside mb-4">
+          <li><strong>Calendário de Eventos:</strong> Um calendário interativo que permite aos usuários visualizar todos os eventos culturais programados, com informações detalhadas sobre cada um, incluindo data, horário, local e descrição.</li>
+          <li><strong>Mapa Interativo:</strong> Um mapa que destaca os pontos turísticos da cidade, permitindo que os usuários localizem facilmente os atrativos e planejem suas visitas.</li>
+          <li><strong>Sistema de Busca:</strong> Uma barra de pesquisa que possibilita que os usuários encontrem rapidamente eventos ou locais específicos.</li>
+          <li><strong>Feedback da Comunidade:</strong> Uma seção onde os cidadãos podem deixar comentários e sugestões sobre eventos e pontos turísticos, promovendo um canal de comunicação contínuo entre a população e a prefeitura.</li>
+        </ul>
+    
+        <h4 class="text-xl font-semibold text-primary mt-6 mb-4">Resultados e Impactos Positivos</h4>
+        <p class="text-lg mb-4">
+          A centralização das informações turísticas em um único local facilitou o planejamento de visitas e a participação em eventos culturais. Além disso, a plataforma contribuiu para a promoção dos atrativos turísticos da cidade, atraindo mais visitantes e gerando oportunidades de desenvolvimento econômico local.
+        </p>
+        <p class="text-lg mb-4">
+          Além disso, a plataforma se tornou um importante canal de comunicação entre a prefeitura e a população. A seção de feedback permitiu que os cidadãos expressassem suas opiniões e sugestões, contribuindo para a melhoria contínua dos serviços oferecidos. A prefeitura, por sua vez, se comprometeu a analisar as sugestões e a implementar melhorias com base nas demandas da comunidade.
+        </p>
+    
+        <h4 class="text-xl font-semibold text-primary mt-6 mb-4">Conclusão</h4>
+        <p class="text-lg">
+          Em resumo, a parceria entre a empresa TechBridge e a Prefeitura Municipal de São João da Boa Vista resultou na criação de uma plataforma web inovadora que resolveu o problema de acesso à informação turística na cidade. Essa solução tecnológica não apenas atendeu às necessidades da população, mas também contribuiu para o fortalecimento do turismo local e o desenvolvimento socioeconômico de São João da Boa Vista.
+        </p>
       </div>
+    </section>
+    
+    <section id="sobre-nos" class="my-10 px-8">
+      <h3 class="text-2xl font-bold text-center mb-6">Sobre Nós</h3>
+    
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h4 class="text-xl font-semibold text-primary mb-4">Quem Somos</h4>
+        <p class="text-lg mb-4">
+          Somos uma empresa apaixonada por tecnologia e inovação, sempre motivados a encontrar as soluções mais viáveis para cada cenário. Formada por funcionários com vasta experiência em diversas áreas de atuação, somos capacitados para decolar sua empresa e fazê-la atingir todos os objetivos traçados. Nosso foco é criar soluções alinhadas com o contexto social de cada cliente, visando os desafios sociais enfrentados pela comunidade e o desenvolvimento socioeconômico sustentável.
+        </p>
+    
+        <h4 class="text-xl font-semibold text-primary mb-4">Missão</h4>
+        <ul class="list-disc list-inside mb-4">
+          <li><strong>Fomentar a Inovação Social:</strong> Incentivar projetos e soluções inovadoras que abordem desafios sociais enfrentados pela comunidade, como educação, saúde, sustentabilidade, entre outros.</li>
+          <li><strong>Apoiar o Desenvolvimento de Talentos:</strong> Conectar empresas com os melhores talentos em tecnologia, promovendo a formação e o desenvolvimento contínuo de profissionais na área.</li>
+        </ul>
+    
+        <h4 class="text-xl font-semibold text-primary mb-4">Visão</h4>
+        <p class="text-lg mb-4">
+          Ser referência em soluções tecnológicas inovadoras que promovam o desenvolvimento socioeconômico sustentável da comunidade.
+        </p>
+    
+        <h4 class="text-xl font-semibold text-primary mb-4">Valores</h4>
+        <ul class="list-disc list-inside mb-4">
+          <li><strong>Colaboração Comunitária:</strong> Estabelecer canais de comunicação e parcerias com lideranças comunitárias, entendendo suas necessidades e trabalhando juntos para encontrar soluções.</li>
+          <li><strong>Colaboração e Parceria:</strong> Trabalhar em estreita colaboração com os clientes, entendendo suas necessidades e adaptando soluções que realmente façam a diferença.</li>
+          <li><strong>Responsabilidade Social:</strong> Dedicação a práticas que gerem impacto positivo na sociedade, com inclusão digital e apoio ao desenvolvimento local.</li>
+        </ul>
+    
+        <h4 class="text-xl font-semibold text-primary mb-4">Contato</h4>
+        <p class="text-lg mb-4">
+          E-mail: <a href="mailto:techbrigdesolutionsIT@gmail.com" class="text-primary underline">techbrigdesolutionsIT@gmail.com</a>
+        </p>
+        <p class="text-lg mb-4">
+          Redes Sociais: 
+          <a href="https://www.instagram.com/techbridg3/" class="text-primary underline" target="_blank">Instagram</a>, 
+          <a href="https://youtube.com/@techbrigde-t3r?si=wCVuK9C1fml25TZ9" class="text-primary underline" target="_blank">YouTube</a>
+        </p>
+    
+        <h4 class="text-xl font-semibold text-primary mb-4">Equipe</h4>
+        <div class="flex flex-wrap gap-6 justify-center p-4">
+          <!-- Cartão de Membro da Equipe -->
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <div class="flex flex-col items-center">
+              <img src="public/img/profile/Lucas.jpeg" alt="Lucas" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p class="text-xl font-bold text-gray-800">Lucas</p>
+              <p class="text-md text-gray-600">20 anos</p>
+            </div>
+          </div>
+          
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <div class="flex flex-col items-center">
+              <img src="public/img/profile/Willian.jpeg" alt="Willian" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p class="text-xl font-bold text-gray-800">Willian</p>
+              <p class="text-md text-gray-600">19 anos</p>
+            </div>
+          </div>
+          
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <div class="flex flex-col items-center">
+              <img src="public/img/profile/Julia.jpeg" alt="Julia" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p class="text-xl font-bold text-gray-800">Julia</p>
+              <p class="text-md text-gray-600">20 anos</p>
+            </div>
+          </div>
+          
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <div class="flex flex-col items-center">
+              <img src="public/img/profile/Adryel.jpeg" alt="Adryel" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p class="text-xl font-bold text-gray-800">Adryel</p>
+              <p class="text-md text-gray-600">20 anos</p>
+            </div>
+          </div>
+          
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <div class="flex flex-col items-center">
+              <img src="public/img/profile/Giulia.jpeg" alt="Giulia" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p class="text-xl font-bold text-gray-800">Giulia</p>
+              <p class="text-md text-gray-600">18 anos</p>
+            </div>
+          </div>
+          
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <div class="flex flex-col items-center">
+              <img src="public/img/profile/Giovanna.jpeg" alt="Giovanna" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p class="text-xl font-bold text-gray-800">Giovanna</p>
+              <p class="text-md text-gray-600">19 anos</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
   </section>
   </main>
 
@@ -150,6 +272,7 @@
               <a class="underline" href="http://github.com/zdearo">Adryel Dearo</a>, 
               <a class="underline" href="">Lucas Giavaroti</a>, 
               <a class="underline" href="">Willian Marques</a>, 
+              <a class="underline" href="">Julia Carolina</a>,
               <a class="underline" href="">Giovanna Satiko</a> e 
               <a class="underline" href="">Giulia Leticie</a> 
               is licensed under 
@@ -176,3 +299,4 @@
 </html>
 <script src="src/assets/menu.js"></script>
 <script src="src/assets/typing.js"></script>
+<script src="src/assets/scrolling.js"></script>
