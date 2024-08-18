@@ -1,4 +1,4 @@
-const text = "Bem vindo, somos a TechBridge!";
+const text = "Bem-vindo, somos a TechBridge!";
 const subtext = "Uma empresa de tecnologia que busca soluções inovadoras para o seu negócio.";
 
 let index = 0;
