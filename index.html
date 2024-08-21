@@ -71,6 +71,7 @@
   </script>
 </head>
 <body class="text-sans bg-off-white flex flex-col min-h-screen flex-grow">
+  <button data-target="#principal" aria-label="Botão para pular" tabindex="0" class="fixed bottom-10 sr-only focus:not-sr-only">Pular ao conteúdo principal</button>
   <header aria-label="Cabeçalho principal" class="w-screen fixed font-sans font-medium sm:p-auto bg-primary shadow-lg drop-shadow-xl z-10">
     <div class="flex flex-row justify-around items-center p-2">
       <img class="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central"> 
@@ -127,7 +128,7 @@
     <section id="caso-sucesso" class="font-serif text-justify my-10 px-8 text-primary">      
       <div class="bg-white p-6 rounded-lg shadow-lg">
         <h4 class="text-xl font-semibold text-primary mb-4">Caso de Sucesso</h4>
-        <p class="text-md mb-4">
+        <p id="principal" class="text-md mb-4">
           A empresa <span class="font-semibold">TechBridge</span>, especializada em desenvolvimento de soluções tecnológicas, recebeu um desafio da Prefeitura Municipal de São João da Boa Vista em 2024: criar uma plataforma que centralizasse todas as informações sobre eventos culturais e pontos turísticos da cidade, facilitando o acesso da população e dos visitantes.
         </p>
         <p class="text-md mb-4">
