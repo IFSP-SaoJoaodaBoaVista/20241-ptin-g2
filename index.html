@@ -71,10 +71,10 @@
   </script>
 </head>
 <body class="text-sans bg-off-white flex flex-col min-h-screen flex-grow">
-  <header class="w-screen fixed font-sans font-medium sm:p-auto bg-primary shadow-lg drop-shadow-xl z-10">
+  <header aria-label="Cabeçalho principal" class="w-screen fixed font-sans font-medium sm:p-auto bg-primary shadow-lg drop-shadow-xl z-10">
     <div class="flex flex-row justify-around items-center p-2">
       <img class="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central"> 
-      <nav class="md:block hidden">
+      <nav aria-label="Menu principal" class="md:block hidden">
         <ul class="flex flex-row gap-8 text-off-white items-center tracking-wide drop-shadow-2xl capitalize">
           <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><button data-target="#inicio">Início</button></li>
           <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><button data-target="#caso-sucesso">Caso de Sucesso</button></li>
@@ -82,46 +82,46 @@
         </ul>
       </nav>
       <button id="menu-btn" type="button" class="cursor-pointer block md:hidden text-secondary focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg aria-hidden="true" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
     </div>
-    <div id="menu" class="bg-oitava hidden md:hidden py-10 px-5 text-left duration-75 drop-shadow-xl">
+    <nav id="menu" class="bg-oitava hidden md:hidden py-10 px-5 text-left duration-75 drop-shadow-xl">
       <ul class="text-primary block text-base tracking-wide flex flex-col gap-2">
-        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><button data-target="#inicio">Início</button></li>
-        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><button data-target="#caso-sucesso">Caso de Sucesso</button></li>
-        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><button data-target="#sobre-nos">Sobre Nós</button></li>
+        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><button aria-label="Ir para o início" data-target="#inicio">Início</button></li>
+        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><button aria-label="Ver caso de sucesso" data-target="#caso-sucesso">Caso de Sucesso</button></li>
+        <li class="cursor-pointer px-3 py-1 text-secondary border-b border-slate-700"><button aria-label="Saiba mais sobre nós" data-target="#sobre-nos">Sobre Nós</button></li>
       </ul>
-    </div>
+    </nav>
   </header>
   <main class="flex-grow overflow-y-auto">
-    <div class="md:opacity-65 md:hover:opacity-100 duration-300 z-10 bg-quaternary rounded-xl fixed bottom-5 right-5 w-10 h-10 md:w-12 md:h-12 flex align-center justify-center shadow-2xl">
+    <div role="button" aria-label="Botão para voltar ao topo da página" class="md:opacity-65 md:hover:opacity-100 duration-300 z-10 bg-quaternary rounded-xl fixed bottom-5 right-5 w-10 h-10 md:w-12 md:h-12 flex align-center justify-center shadow-2xl">
       <button data-target="#typing" id="to-the-top" type="button" class="">
-        <img viewBox="0 0 10 10" class="w-2/4 m-auto" src="./public/img/up-arrow-svgrepo-com.svg" alt="">
+        <img aria-hidden="true" viewBox="0 0 10 10" class="w-2/4 m-auto" src="./public/img/up-arrow-svgrepo-com.svg" alt="Seta apontando para cima">
       </button>
     </div>
-    <section id="inicio" class="flex flex-col md:flex-row md:gap-8 justify-center items-center text-off-white bg-[url('public/img/dark-sea.jpeg')] h-screen bg-no-repeat bg-cover" >
+    <section aria-labelledby="inicio-heading" id="inicio" class="flex flex-col md:flex-row md:gap-8 justify-center items-center text-off-white bg-[url('public/img/dark-sea.jpeg')] h-screen bg-no-repeat bg-cover" >
       <div class="flex flex-col justify-left gap-6 px-10 w-11/12 md:w-3/6">
-        <h2 id="typing" class="text-left font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans drop-shadow-2xl z-auto"></h2>
-        <h3 id="sub-typing" class="text-left text-xl sm:text-2xl drop-shadow-2xl"></h3>
-        <button data-target="#video" id="learn-more" type="button" class="hidden animate-fade justify-around text-sm w-3/6 530:w-3/6 530:text-base md:w-3/6 lg:w-4/12 xl:w-3/12 text-primary font-semibold bg-white hover:bg-off-white font-sans rounded-lg px-5 py-2.5 text-center inline-flex items-center">
+        <h2 aria-label="Título principal da seção" id="typing" class="text-left font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans drop-shadow-2xl z-auto"></h2>
+        <h3 aria-label="Sub-título da seção" id="sub-typing" class="text-left text-xl sm:text-2xl drop-shadow-2xl"></h3>
+        <button aria-label="Saiba mais sobre a empresa" data-target="#video" id="learn-more" type="button" class="hidden animate-fade justify-around text-sm w-3/6 530:w-3/6 530:text-base md:w-3/6 lg:w-4/12 xl:w-3/12 text-primary font-semibold bg-white hover:bg-off-white font-sans rounded-lg px-5 py-2.5 text-center inline-flex items-center">
           Saiba Mais
-          <img viewBox="0 0 10 10" class="w-3" src="./public/img/down-arrow-svgrepo-com.svg" alt="">
+          <img viewBox="0 0 10 10" class="w-3" src="./public/img/down-arrow-svgrepo-com.svg" alt="Seta apontando para baixo">
         </button>
       </div>
       <div class="hidden md:block w-2/6">
-        <img class="w-full" viewBox="0 0 50 50" src="./public/img/connected-rafiki.svg" alt="">
+        <img class="w-full" viewBox="0 0 50 50" src="./public/img/connected-rafiki.svg" alt="Ilustração de uma conexão digital entre dispositivos">
       </div>
     </section>
 
-    <section id="video" class="h-screen w-screen flex flex-col justify-evenly">
+    <section aria-labelledby="video-heading" id="video" class="h-screen w-screen flex flex-col justify-evenly">
       <div class="py-5 flex flex-col text-center gap-5">
-        <h2 class="font-sans text-2xl font-semibold text-primary">Conheça um pouco sobre nossa empresa!</h2>
-        <hr class="border-2 border-neutral-300 border-solid w-3/12 lg:w-3/12 mx-auto">  
+        <h2 id="video-heading" class="font-sans text-2xl font-semibold text-primary">Conheça um pouco sobre nossa empresa!</h2>
+        <hr aria-hidden="true" class="border-2 border-neutral-300 border-solid w-3/12 lg:w-3/12 mx-auto">  
       </div>
       <div class=" h-4/6 w-screen flex justify-center px-10">
-        <iframe class="drop-shadow-2xl w-screen sm:w-3/4 lg:w-3/4" src="https://www.youtube.com/embed/J37EhEaUdQU?si=mCy12kr2g7qSj530" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe aria-label="Player de vídeo no YouTube" class="drop-shadow-2xl w-screen sm:w-3/4 lg:w-3/4" src="https://www.youtube.com/embed/J37EhEaUdQU?si=mCy12kr2g7qSj530" title="Vídeo sobre a empresa TechBridge" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </section>
     <section id="caso-sucesso" class="font-serif text-justify my-10 px-8 text-primary">      
