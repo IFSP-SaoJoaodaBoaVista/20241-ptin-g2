@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechBridge</title>
@@ -11,7 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
   <script>
     // CORES DE FUNDO
     tailwind.config = {
@@ -30,16 +28,7 @@
             'primary': '#062A44',
             'blue-whale': {
                 '50': '#f0f9ff',
-                '100': '#dff1ff',
-                '200': '#b9e5fe',
-                '300': '#7ad1ff',
-                '400': '#34bbfc',
                 '500': '#09a3ee',
-                '600': '#0081cb',
-                '700': '#0067a4',
-                '800': '#045788',
-                '900': '#0a4970',
-                '950': '#062a44',
             },
             'secondary': '#CBF3EA',
             'tertiary': '#31C4CE',
@@ -71,22 +60,22 @@
   </script>
 </head>
 <body class="text-sans bg-off-white flex flex-col min-h-screen flex-grow">
-  <button data-target="#principal" aria-label="Botão para pular" tabindex="0" class="sr-only focus:not-sr-only">Pular ao conteúdo principal</button>
+  <button data-target="#principal" aria-label="Botão para pular" tabindex="0" class="sr-only focus:not-sr-only" accesskey="s">Pular ao conteúdo principal</button>
   <header aria-label="Cabeçalho principal" class="w-screen fixed font-sans font-medium sm:p-auto bg-primary shadow-lg drop-shadow-xl z-10">
     <div class="flex flex-row justify-around items-center p-2">
-      <img class="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central"> 
-      <nav aria-label="Menu principal" class="md:block hidden">
+      <img class="w-16 h-16 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20" src="public/img/logo-techBridge.png" alt="Logotipo da empresa TechBridge, com uma ponte como elemento central" loading="lazy">
+      <nav role="navigation" aria-label="Menu principal" class="md:block hidden">
         <ul class="flex flex-row gap-8 text-off-white items-center tracking-wide drop-shadow-2xl capitalize">
-          <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><button data-target="#inicio">Início</button></li>
-          <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><button data-target="#caso-sucesso">Caso de Sucesso</button></li>
-          <li class="cursor-pointer border-2 border-blue-whale-50 px-3 py-px rounded-lg bg-off-white text-primary animate-bounce duration-300"><button data-target="#sobre-nos">Sobre nós</button></li>
+            <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><button data-target="#inicio" aria-current="page">Início</button></li>
+            <li class="cursor-pointer px-1 pb-px border-b-2 border-transparent hover:border-off-white duration-300"><button data-target="#caso-sucesso">Caso de Sucesso</button></li>
+            <li class="cursor-pointer border-2 border-blue-whale-50 px-3 py-px rounded-lg bg-off-white text-primary animate-bounce duration-300"><button data-target="#sobre-nos">Sobre nós</button></li>
         </ul>
-      </nav>
-      <button id="menu-btn" type="button" class="cursor-pointer block md:hidden text-secondary focus:outline-none">
+      </nav>    
+      <button id="menu-btn" type="button" class="cursor-pointer block md:hidden text-secondary focus:outline-none" aria-expanded="false">
         <svg aria-hidden="true" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
-      </button>
+      </button>    
     </div>
     <nav id="menu" class="bg-oitava hidden md:hidden py-10 px-5 text-left duration-75 drop-shadow-xl">
       <ul class="text-primary block text-base tracking-wide flex flex-col gap-2">
@@ -125,9 +114,9 @@
         <iframe aria-label="Player de vídeo no YouTube" class="drop-shadow-2xl w-screen sm:w-3/4 lg:w-3/4" src="https://www.youtube.com/embed/J37EhEaUdQU?si=mCy12kr2g7qSj530" title="Vídeo sobre a empresa TechBridge" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </section>
-    <section id="caso-sucesso" class="font-serif text-justify my-10 px-8 text-primary">      
+    <section aria-label="Caso de Sucesso: TechBridge" id="caso-sucesso" class="font-serif text-justify my-10 px-8 text-primary">
       <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h4 class="text-xl font-semibold text-primary mb-4">Caso de Sucesso</h4>
+        <h4 class="text-xl font-semibold text-primary mb-4" aria-labelledby="titulo-caso-sucesso">Caso de Sucesso</h4>
         <p id="principal" class="text-md mb-4">
           A empresa <span class="font-semibold">TechBridge</span>, especializada em desenvolvimento de soluções tecnológicas, recebeu um desafio da Prefeitura Municipal de São João da Boa Vista em 2024: criar uma plataforma que centralizasse todas as informações sobre eventos culturais e pontos turísticos da cidade, facilitando o acesso da população e dos visitantes.
         </p>
@@ -138,17 +127,17 @@
           Para resolver esse problema, a prefeitura buscou uma empresa parceira que pudesse atender às necessidades da população de forma eficaz e inovadora. Este projeto não apenas visava melhorar a comunicação, mas também fortalecer a identidade cultural da cidade e promover o turismo local.
         </p>
     
-        <h4 class="text-xl font-semibold text-primary mt-6 mb-4">Mapeamento das Necessidades da População</h4>
+        <h4 class="text-xl font-semibold text-primary mt-6 mb-4" aria-labelledby="titulo-mapeamento">Mapeamento das Necessidades da População</h4>
         <p class="text-md mb-4">
           A empresa iniciou o projeto com um levantamento de requisitos junto à população de São João da Boa Vista. Por meio de entrevistas, grupos focais e pesquisas online, a equipe da empresa identificou que muitos moradores, especialmente aqueles de regiões mais afastadas do centro, não tinham conhecimento completo sobre os pontos turísticos, horários de funcionamento e locais importantes da cidade.
         </p>
     
-        <h4 class="text-xl font-semibold text-primary mt-6 mb-4">Desenvolvimento da Plataforma</h4>
+        <h4 class="text-xl font-semibold text-primary mt-6 mb-4" aria-labelledby="titulo-desenvolvimento">Desenvolvimento da Plataforma</h4>
         <p class="text-md mb-4">
           Com os requisitos em mãos, a TechBridge iniciou o processo de prototipação e desenvolvimento da plataforma web. A equipe trabalhou em estreita colaboração com a prefeitura para garantir que todas as informações relevantes fossem incluídas e apresentadas de forma clara e acessível.
         </p>
     
-        <h4 class="text-xl font-semibold text-primary mt-6 mb-4">Design e Funcionalidades</h4>
+        <h4 class="text-xl font-semibold text-primary mt-6 mb-4" aria-labelledby="titulo-design">Design e Funcionalidades</h4>
         <p class="text-md mb-4">
           A plataforma foi projetada para ser intuitiva e fácil de navegar, com uma interface amigável e responsiva para dispositivos móveis. As principais funcionalidades incluíam:
         </p>
@@ -159,7 +148,7 @@
           <li><strong>Feedback da Comunidade:</strong> Uma seção onde os cidadãos podem deixar comentários e sugestões sobre eventos e pontos turísticos, promovendo um canal de comunicação contínuo entre a população e a prefeitura.</li>
         </ul>
     
-        <h4 class="text-xl font-semibold text-primary mt-6 mb-4">Resultados e Impactos Positivos</h4>
+        <h4 class="text-xl font-semibold text-primary mt-6 mb-4" aria-labelledby="titulo-resultados">Resultados e Impactos Positivos</h4>
         <p class="text-md mb-4">
           A centralização das informações turísticas em um único local facilitou o planejamento de visitas e a participação em eventos culturais. Além disso, a plataforma contribuiu para a promoção dos atrativos turísticos da cidade, atraindo mais visitantes e gerando oportunidades de desenvolvimento econômico local.
         </p>
@@ -167,141 +156,142 @@
           Além disso, a plataforma se tornou um importante canal de comunicação entre a prefeitura e a população. A seção de feedback permitiu que os cidadãos expressassem suas opiniões e sugestões, contribuindo para a melhoria contínua dos serviços oferecidos. A prefeitura, por sua vez, se comprometeu a analisar as sugestões e a implementar melhorias com base nas demandas da comunidade.
         </p>
     
-        <h4 class="text-xl font-semibold text-primary mt-6 mb-4">Conclusão</h4>
+        <h4 class="text-xl font-semibold text-primary mt-6 mb-4" aria-labelledby="titulo-conclusao">Conclusão</h4>
         <p class="text-md">
           Em resumo, a parceria entre a empresa TechBridge e a Prefeitura Municipal de São João da Boa Vista resultou na criação de uma plataforma web inovadora que resolveu o problema de acesso à informação turística na cidade. Essa solução tecnológica não apenas atendeu às necessidades da população, mas também contribuiu para o fortalecimento do turismo local e o desenvolvimento socioeconômico de São João da Boa Vista.
         </p>
       </div>
-    </section>
+    </section>    
     
-    <section id="sobre-nos" class="text-md my-10 px-8 font-serif text-primary text-justify">
-      <h3 class="text-2xl font-bold text-center mb-6">Sobre Nós</h3>
+    <section id="sobre-nos" class="text-md my-10 px-8 font-serif text-primary text-justify" aria-labelledby="titulo-sobre-nos">
+      <h3 id="titulo-sobre-nos" class="text-2xl font-bold text-center mb-6">Sobre Nós</h3>
     
       <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h4 class="text-xl font-semibold text-primary mb-4">Quem Somos</h4>
+        <h4 class="text-xl font-semibold text-primary mb-4" aria-labelledby="titulo-quem-somos">Quem Somos</h4>
         <p class="mb-4">
           Somos uma empresa apaixonada por tecnologia e inovação, sempre motivados a encontrar as soluções mais viáveis para cada cenário. Formada por funcionários com vasta experiência em diversas áreas de atuação, somos capacitados para decolar sua empresa e fazê-la atingir todos os objetivos traçados. Nosso foco é criar soluções alinhadas com o contexto social de cada cliente, visando os desafios sociais enfrentados pela comunidade e o desenvolvimento socioeconômico sustentável.
         </p>
     
-        <h4 class="text-xl font-semibold text-primary mb-4">Missão</h4>
+        <h4 class="text-xl font-semibold text-primary mb-4" aria-labelledby="titulo-missao">Missão</h4>
         <ul class="list-disc list-inside mb-4">
           <li><strong>Fomentar a Inovação Social:</strong> Incentivar projetos e soluções inovadoras que abordem desafios sociais enfrentados pela comunidade, como educação, saúde, sustentabilidade, entre outros.</li>
           <li><strong>Apoiar o Desenvolvimento de Talentos:</strong> Conectar empresas com os melhores talentos em tecnologia, promovendo a formação e o desenvolvimento contínuo de profissionais na área.</li>
         </ul>
     
-        <h4 class="text-xl font-semibold text-primary mb-4">Visão</h4>
+        <h4 class="text-xl font-semibold text-primary mb-4" aria-labelledby="titulo-visao">Visão</h4>
         <p class="mb-4">
           Ser referência em soluções tecnológicas inovadoras que promovam o desenvolvimento socioeconômico sustentável da comunidade.
         </p>
     
-        <h4 class="text-xl font-semibold text-primary mb-4">Valores</h4>
+        <h4 class="text-xl font-semibold text-primary mb-4" aria-labelledby="titulo-valores">Valores</h4>
         <ul class="list-disc list-inside mb-4">
           <li><strong>Colaboração Comunitária:</strong> Estabelecer canais de comunicação e parcerias com lideranças comunitárias, entendendo suas necessidades e trabalhando juntos para encontrar soluções.</li>
           <li><strong>Colaboração e Parceria:</strong> Trabalhar em estreita colaboração com os clientes, entendendo suas necessidades e adaptando soluções que realmente façam a diferença.</li>
           <li><strong>Responsabilidade Social:</strong> Dedicação a práticas que gerem impacto positivo na sociedade, com inclusão digital e apoio ao desenvolvimento local.</li>
         </ul>
     
-        <h4 class="text-xl font-semibold text-primary mb-4">Contato</h4>
+        <h4 class="text-xl font-semibold text-primary mb-4" aria-labelledby="titulo-contato">Contato</h4>
         <p class="mb-4">
           E-mail: <a href="mailto:techbrigdesolutionsIT@gmail.com" class="text-primary underline">techbrigdesolutionsIT@gmail.com</a>
         </p>
         <p class="mb-4">
           Redes Sociais: 
-          <a href="https://www.instagram.com/techbridg3/" class="text-primary underline" target="_blank">Instagram</a>, 
-          <a href="https://youtube.com/@techbrigde-t3r?si=wCVuK9C1fml25TZ9" class="text-primary underline" target="_blank">YouTube</a>
+          <a href="https://www.instagram.com/techbridg3/" class="text-primary underline" target="_blank" aria-label="Instagram da empresa">Instagram</a>, 
+          <a href="https://youtube.com/@techbrigde-t3r?si=wCVuK9C1fml25TZ9" class="text-primary underline" target="_blank" aria-label="YouTube da empresa">YouTube</a>
         </p>
     
-        <h4 class="text-md font-semibold text-primary mb-4">Equipe</h4>
+        <h4 class="text-md font-semibold text-primary mb-4" aria-labelledby="titulo-equipe">Equipe</h4>
         <div class="flex flex-wrap gap-6 justify-center p-4">
           <!-- Cartão de Membro da Equipe -->
-          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105" aria-labelledby="membro-equipe-lucas">
             <div class="flex flex-col items-center">
-              <img src="public/img/profile/Lucas.jpeg" alt="Lucas" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
-              <p class="font-bold text-gray-800">Lucas</p>
+              <img src="public/img/profile/Lucas.jpeg" alt="Foto de Lucas" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p id="membro-equipe-lucas" class="font-bold text-gray-800">Lucas</p>
               <p class="text-gray-600">20 anos</p>
             </div>
           </div>
           
-          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105" aria-labelledby="membro-equipe-willian">
             <div class="flex flex-col items-center">
-              <img src="public/img/profile/Willian.jpeg" alt="Willian" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
-              <p class="font-bold text-gray-800">Willian</p>
+              <img src="public/img/profile/Willian.jpeg" alt="Foto de Willian" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p id="membro-equipe-willian" class="font-bold text-gray-800">Willian</p>
               <p class="text-gray-600">19 anos</p>
             </div>
           </div>
           
-          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105" aria-labelledby="membro-equipe-julia">
             <div class="flex flex-col items-center">
-              <img src="public/img/profile/Julia.jpeg" alt="Julia" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
-              <p class="font-bold text-gray-800">Julia</p>
+              <img src="public/img/profile/Julia.jpeg" alt="Foto de Julia" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p id="membro-equipe-julia" class="font-bold text-gray-800">Julia</p>
               <p class="text-gray-600">20 anos</p>
             </div>
           </div>
           
-          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105" aria-labelledby="membro-equipe-adryel">
             <div class="flex flex-col items-center">
-              <img src="public/img/profile/Adryel.jpeg" alt="Adryel" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
-              <p class="font-bold text-gray-800">Adryel</p>
+              <img src="public/img/profile/Adryel.jpeg" alt="Foto de Adryel" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p id="membro-equipe-adryel" class="font-bold text-gray-800">Adryel</p>
               <p class="text-gray-600">20 anos</p>
             </div>
           </div>
           
-          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105" aria-labelledby="membro-equipe-giulia">
             <div class="flex flex-col items-center">
-              <img src="public/img/profile/Giulia.jpeg" alt="Giulia" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
-              <p class="font-bold text-gray-800">Giulia</p>
+              <img src="public/img/profile/Giulia.jpeg" alt="Foto de Giulia" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p id="membro-equipe-giulia" class="font-bold text-gray-800">Giulia</p>
               <p class="text-gray-600">18 anos</p>
             </div>
           </div>
           
-          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+          <div class="w-64 bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105" aria-labelledby="membro-equipe-giovanna">
             <div class="flex flex-col items-center">
-              <img src="public/img/profile/Giovanna.jpeg" alt="Giovanna" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
-              <p class="font-bold text-gray-800">Giovanna</p>
+              <img src="public/img/profile/Giovanna.jpeg" alt="Foto de Giovanna" class="w-24 h-24 object-cover rounded-full border-4 border-primary mb-4">
+              <p id="membro-equipe-giovanna" class="font-bold text-gray-800">Giovanna</p>
               <p class="text-gray-600">19 anos</p>
             </div>
           </div>
         </div>
         
       </div>
-    </section>
-    
+    </section>    
   </section>
   </main>
 
   <!-- footer-container -->
-  <footer class="bg-primary text-off-white">
-      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+  <footer class="bg-primary text-off-white" aria-label="Rodapé">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <hr class="my-2 border-off-white sm:mx-auto lg:my-4" />
         <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm sm:text-left w-3/6">© 2024 
-              <a href="https://github.com/IFSP-SaoJoaodaBoaVista/20241-ptin-g2" class="underline">TechBridge</a>. by 
-              <a class="underline" href="http://github.com/zdearo">Adryel Dearo</a>, 
-              <a class="underline" href="">Lucas Giavaroti</a>, 
-              <a class="underline" href="">Willian Marques</a>, 
-              <a class="underline" href="">Julia Carolina</a>,
-              <a class="underline" href="">Giovanna Satiko</a> e 
-              <a class="underline" href="">Giulia Leticie</a> 
-              is licensed under 
-              <a class="underline" href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International </a>
-            </span>
-            <div class="flex mt-4 sm:justify-center sm:mt-0">
-                <a href="https://youtube.com/@techbrigde-t3r?si=wCVuK9C1fml25TZ9" class="hover:text-gray-900" target="_blank">
+            <p class="text-sm sm:text-left w-3/6" aria-label="Informações de direitos autorais">
+                © 2024 
+                <a href="https://github.com/IFSP-SaoJoaodaBoaVista/20241-ptin-g2" class="underline">TechBridge</a>. by 
+                <a class="underline" href="http://github.com/zdearo">Adryel Dearo</a>, 
+                <a class="underline" href="#">Lucas Giavaroti</a>, 
+                <a class="underline" href="#">Willian Marques</a>, 
+                <a class="underline" href="#">Julia Carolina</a>,
+                <a class="underline" href="#">Giovanna Satiko</a> e 
+                <a class="underline" href="#">Giulia Leticie</a>
+                é licenciado sob 
+                <a class="underline" href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.
+            </p>
+            <nav aria-label="Redes sociais" class="flex mt-4 sm:justify-center sm:mt-0">
+                <a href="https://youtube.com/@techbrigde-t3r?si=wCVuK9C1fml25TZ9" class="hover:text-gray-900" target="_blank" aria-label="Youtube TechBridge">
                     <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 24 24">
-                      <path d="M 12 4 C 12 4 5.7455469 3.9999687 4.1855469 4.4179688 C 3.3245469 4.6479688 2.6479687 5.3255469 2.4179688 6.1855469 C 1.9999687 7.7455469 2 12 2 12 C 2 12 1.9999687 16.254453 2.4179688 17.814453 C 2.6479687 18.675453 3.3255469 19.352031 4.1855469 19.582031 C 5.7455469 20.000031 12 20 12 20 C 12 20 18.254453 20.000031 19.814453 19.582031 C 20.674453 19.352031 21.352031 18.674453 21.582031 17.814453 C 22.000031 16.254453 22 12 22 12 C 22 12 22.000031 7.7455469 21.582031 6.1855469 C 21.352031 5.3255469 20.674453 4.6479688 19.814453 4.4179688 C 18.254453 3.9999687 12 4 12 4 z M 12 6 C 14.882 6 18.490875 6.1336094 19.296875 6.3496094 C 19.465875 6.3946094 19.604391 6.533125 19.650391 6.703125 C 19.891391 7.601125 20 10.342 20 12 C 20 13.658 19.891391 16.397875 19.650391 17.296875 C 19.605391 17.465875 19.466875 17.604391 19.296875 17.650391 C 18.491875 17.866391 14.882 18 12 18 C 9.119 18 5.510125 17.866391 4.703125 17.650391 C 4.534125 17.605391 4.3956094 17.466875 4.3496094 17.296875 C 4.1086094 16.398875 4 13.658 4 12 C 4 10.342 4.1086094 7.6011719 4.3496094 6.7011719 C 4.3946094 6.5331719 4.533125 6.3946094 4.703125 6.3496094 C 5.508125 6.1336094 9.118 6 12 6 z M 10 8.5351562 L 10 15.464844 L 16 12 L 10 8.5351562 z"></path>
+                        <path d="M 12 4 C 12 4 5.7455469 3.9999687 4.1855469 4.4179688 C 3.3245469 4.6479688 2.6479687 5.3255469 2.4179688 6.1855469 C 1.9999687 7.7455469 2 12 2 12 C 2 12 1.9999687 16.254453 2.4179688 17.814453 C 2.6479687 18.675453 3.3255469 19.352031 4.1855469 19.582031 C 5.7455469 20.000031 12 20 12 20 C 12 20 18.254453 20.000031 19.814453 19.582031 C 20.674453 19.352031 21.352031 18.674453 21.582031 17.814453 C 22.000031 16.254453 22 12 22 12 C 22 12 22.000031 7.7455469 21.582031 6.1855469 C 21.352031 5.3255469 20.674453 4.6479688 19.814453 4.4179688 C 18.254453 3.9999687 12 4 12 4 z M 12 6 C 14.882 6 18.490875 6.1336094 19.296875 6.3496094 C 19.465875 6.3946094 19.604391 6.533125 19.650391 6.703125 C 19.891391 7.601125 20 10.342 20 12 C 20 13.658 19.891391 16.397875 19.650391 17.296875 C 19.605391 17.465875 19.466875 17.604391 19.296875 17.650391 C 18.491875 17.866391 14.882 18 12 18 C 9.119 18 5.510125 17.866391 4.703125 17.650391 C 4.534125 17.605391 4.3956094 17.466875 4.3496094 17.296875 C 4.1086094 16.398875 4 13.658 4 12 C 4 10.342 4.1086094 7.6011719 4.3496094 6.7011719 C 4.3946094 6.5331719 4.533125 6.3946094 4.703125 6.3496094 C 5.508125 6.1336094 9.118 6 12 6 z M 10 8.5351562 L 10 15.464844 L 16 12 L 10 8.5351562 z"></path>
                     </svg>
                     <span class="sr-only">Youtube</span>
                 </a>
-                <a href="https://www.instagram.com/techbridg3/" class="hover:text-gray-900 ms-5" target="_blank">
-                  <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 48 48"> <path d="M 16.5 5 C 10.16639 5 5 10.16639 5 16.5 L 5 31.5 C 5 37.832757 10.166209 43 16.5 43 L 31.5 43 C 37.832938 43 43 37.832938 43 31.5 L 43 16.5 C 43 10.166209 37.832757 5 31.5 5 L 16.5 5 z M 16.5 8 L 31.5 8 C 36.211243 8 40 11.787791 40 16.5 L 40 31.5 C 40 36.211062 36.211062 40 31.5 40 L 16.5 40 C 11.787791 40 8 36.211243 8 31.5 L 8 16.5 C 8 11.78761 11.78761 8 16.5 8 z M 34 12 C 32.895 12 32 12.895 32 14 C 32 15.105 32.895 16 34 16 C 35.105 16 36 15.105 36 14 C 36 12.895 35.105 12 34 12 z M 24 14 C 18.495178 14 14 18.495178 14 24 C 14 29.504822 18.495178 34 24 34 C 29.504822 34 34 29.504822 34 24 C 34 18.495178 29.504822 14 24 14 z M 24 17 C 27.883178 17 31 20.116822 31 24 C 31 27.883178 27.883178 31 24 31 C 20.116822 31 17 27.883178 17 24 C 17 20.116822 20.116822 17 24 17 z">
-                    </path> 
-                  </svg>
+                <a href="https://www.instagram.com/techbridg3/" class="hover:text-gray-900 ms-5" target="_blank" aria-label="Instagram TechBridge">
+                    <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 48 48">
+                        <path d="M 16.5 5 C 10.16639 5 5 10.16639 5 16.5 L 5 31.5 C 5 37.832757 10.166209 43 16.5 43 L 31.5 43 C 37.832938 43 43 37.832938 43 31.5 L 43 16.5 C 43 10.166209 37.832757 5 31.5 5 L 16.5 5 z M 16.5 8 L 31.5 8 C 36.211243 8 40 11.787791 40 16.5 L 40 31.5 C 40 36.211062 36.211062 40 31.5 40 L 16.5 40 C 11.787791 40 8 36.211243 8 31.5 L 8 16.5 C 8 11.78761 11.78761 8 16.5 8 z M 34 12 C 32.895 12 32 12.895 32 14 C 32 15.105 32.895 16 34 16 C 35.105 16 36 15.105 36 14 C 36 12.895 35.105 12 34 12 z M 24 14 C 18.495178 14 14 18.495178 14 24 C 14 29.504822 18.495178 34 24 34 C 29.504822 34 34 29.504822 34 24 C 34 18.495178 29.504822 14 24 14 z M 24 17 C 27.883178 17 31 20.116822 31 24 C 31 27.883178 27.883178 31 24 31 C 20.116822 31 17 27.883178 17 24 C 17 20.116822 20.116822 17 24 17 z"></path>
+                    </svg>
                     <span class="sr-only">Instagram</span>
                 </a>
-            </div>
+            </nav>
         </div>
-      </div>
-    </footer>  
+    </div>
+  </footer>
+  
 </body>
 </html>
 <script src="src/assets/menu.js"></script>
