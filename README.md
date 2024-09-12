@@ -1,7 +1,7 @@
 # 20241-ptin-g2
 
 # TechBrigde
-Bem-vindo ao repositório do projeto TechBrigde, desenvolvido pelos alunos do primeiro ano do curso de Tecnologia em Sistemas para Internet (TSI) de 2024. Este projeto visa resolver uma questão importante para o município de São João da Boa Vista: a falta de informações acessíveis sobre turismo e pontos de interesse na região.
+Bem-vindo ao repositório do projeto TechBrigde, desenvolvido pelos alunos do primeiro semestre do curso de Tecnologia em Sistemas para Internet (TSI) de 2024. Este projeto visa resolver uma questão importante para o município de São João da Boa Vista: a falta de informações acessíveis sobre turismo e pontos de interesse na região.
 
 ## Sobre o Projeto
 O TechBrigde é uma empresa fictícia que oferece soluções tecnológicas para melhorar o acesso a informações turísticas e de lazer. Nosso objetivo é criar uma página web que forneça aos moradores e visitantes de São João da Boa Vista detalhes essenciais sobre horários de funcionamento, eventos próximos, locais para lazer, opções de alimentação e muito mais.
